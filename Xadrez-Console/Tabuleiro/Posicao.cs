@@ -1,6 +1,6 @@
-﻿namespace Tabuleiro
+﻿namespace tabuleiro
 {
-    public class Posicao
+    class Posicao
     {
         public Posicao(int linha, int coluna)
         {

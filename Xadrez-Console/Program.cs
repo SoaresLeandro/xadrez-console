@@ -1,4 +1,4 @@
-﻿using Tabuleiro;
+﻿using tabuleiro;
 
 public class Program
 {
