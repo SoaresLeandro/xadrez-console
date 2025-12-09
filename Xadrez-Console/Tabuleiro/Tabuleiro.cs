@@ -1,16 +1,20 @@
-﻿namespace tabuleiro
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace tabuleiro
 {
     class Tabuleiro
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-        public int[,] Pecas;
+        public Peca[,] Pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
             Linhas = linhas;
             Colunas = colunas;
-            Pecas = new int[linhas, colunas];
+            Pecas = new Peca[linhas, colunas];
         }
+
+        public Peca Peca(int linha, int coluna) => Pecas[linha, coluna];
     }
 }
