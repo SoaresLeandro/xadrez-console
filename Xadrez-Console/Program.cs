@@ -6,6 +6,10 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        PosicaoXadrez posicaoXadrez = new PosicaoXadrez('b', 4);
+
+        Console.WriteLine(posicaoXadrez.ToPosicao().ToString());
+
         try
         {
             Tabuleiro tabuleiro = new Tabuleiro(8, 8);
