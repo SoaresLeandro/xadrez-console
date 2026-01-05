@@ -16,10 +16,15 @@ public class Program
                 {
                     Console.Clear();
                     Tela.ImprimirTabuleiro(partida.Tabuleiro);
+                    Console.WriteLine();
+                    Console.WriteLine("Turno: " + partida.Turno);
+                    Console.WriteLine("Aguardando jogada: " + partida.JogadorAutal);
 
                     Console.WriteLine();
                     Console.Write("Origem: ");
                     Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+
+                    partida.ValidarPosicaoDeOrigem(origem);
 
                     bool[,] movimentosPossiveis = partida.Tabuleiro.Peca(origem).MovimentosPossiveis();
 
@@ -31,7 +36,9 @@ public class Program
                     Console.Write("Destino: ");
                     Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 
-                    partida.ExecutaMovimento(origem, destino);
+                    partida.ValidarPosicaoDeDestino(origem, destino);
+
+                    partida.RealizaJogada(origem, destino);
                 }
                 catch (TabuleiroException e)
                 {

@@ -21,7 +21,7 @@ namespace xadrez_Console
         public static void ImprimirTabuleiro(Tabuleiro tabuleiro, bool[,] movimentosPossiveis)
         {
             ConsoleColor fundoOriginal = Console.BackgroundColor;
-            ConsoleColor fundoMovimentoPossivel = ConsoleColor.DarkYellow;
+            ConsoleColor fundoMovimentoPossivel = ConsoleColor.DarkGray;
 
             for (int i = 0; i < tabuleiro.Linhas; i++)
             {
